@@ -1,5 +1,6 @@
+require 'cgi'
 require 'oauth2'
-require 'activesupport'
+require 'json'
 
 module Rixi
   SITE = 'http://api.mixi-platform.com'
