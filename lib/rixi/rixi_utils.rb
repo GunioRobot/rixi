@@ -1,4 +1,4 @@
-class Rixi
+module Rixi
   module Utils
     # scope as hash to query
     def scope_to_query(scope)
