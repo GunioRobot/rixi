@@ -1,13 +1,12 @@
-require 'oauth2'
-require_relative 'rixi_request'
-require_relative 'rixi_utils'
-require_relative 'rixi_auth'
+require 'rixi/request'
+require 'rixi/utils'
+require 'rixi/authentication'
 
 module Rixi
-  class Client < OAuth2::Client
-    include Request
-    include Utils
-    include Authenticate
+  class Facade < OAuth2::Client
+    include Rixi::Facade::Request
+    include Rixi::Facade::Utils
+    include Rixi::Facade::Authenticate
     
     attr_reader :redirect_uri, :scope, :token
     
@@ -31,4 +30,6 @@ module Rixi
       self
     end
   end
+
+
 end

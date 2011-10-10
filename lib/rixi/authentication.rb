@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 module Rixi
-  class Client
+  class Facade
     module Authenticate
       def authorize_url
         self.auth_code.super(:scope => @scope)

@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-require_relative 'rixi_utils'
 
 # Rixiで実際にHTTPリクエストをする部分
 module Rixi
-  class Client
+  class Facade
     module Request
       def get(path, params = { })
         extend_expire()
